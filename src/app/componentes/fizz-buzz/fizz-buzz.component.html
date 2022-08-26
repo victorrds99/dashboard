@@ -1,0 +1,31 @@
+<h1>fizz-buzz works!</h1>
+
+
+<form class="row g-6">
+    <div class="col-auto">
+      <label for="limite" class="form-label">Digite a quantidade:</label>
+     
+     
+    </div>
+    <div class="col-auto">
+      <label for="inputPassword2" class="visually-hidden">Numero</label>
+      <input type="text"
+      class="form-control"
+      id="limite"
+      maxlength="4"
+      size="4"
+      (keyup)='setLimite($event)'
+      value="15"
+      numero
+      >
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3" (click)="gerar($event)" id="btnGerar">Criar</button>
+    </div>
+  </form>
+
+
+  <h2 *ngIf="resultado.length > 0 " class="resultado">{{limite | retorno}}</h2>
+  <ul>
+      <li *ngFor="let linha of resultado">{{linha}} </li>
+  </ul>
